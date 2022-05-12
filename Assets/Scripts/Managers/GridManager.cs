@@ -1,11 +1,12 @@
 using System;
+using Managers;
 using UnityEngine;
 
 public class GridManager : MonoBehaviour
 {
     public static GridManager Instance;
-    
-    private int       width, height;
+
+    private                  int       width, height;
     [SerializeField] private Tile      tilePrefab;
     [SerializeField] private Transform cam;
 
@@ -14,14 +15,16 @@ public class GridManager : MonoBehaviour
         Instance = this;
     }
 
-    public void GenerateGrid(int width, int height)
+    public void GenerateGrid()
     {
-        this.width  = width;
-        this.height = height;
-        
+        var currentLevel = LevelManager.Instance.GetCurrentLevel();
+        this.width  = currentLevel[0].Length;
+        this.height = currentLevel.Length;
+
         for (var x = 0; x < width; x++)
         for (var y = 0; y < height; y++)
         {
+            // TODO: change init logic
             var tile = Instantiate(tilePrefab, new Vector3(x, y), Quaternion.identity);
             tile.name = $"Tile {x} {y}";
 

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1273151743931283271}
   - component: {fileID: 5135498375913305384}
   - component: {fileID: -6288120143763223153}
+  - component: {fileID: 7504085750522740251}
   m_Layer: 0
   m_Name: Flow_head
   m_TagString: Untagged
@@ -92,8 +93,20 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 588180593257245290}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2395108761376e145a710e40213e9b03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7504085750522740251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588180593257245290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4ff471815a0c9e44833c84cadd3a4d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
